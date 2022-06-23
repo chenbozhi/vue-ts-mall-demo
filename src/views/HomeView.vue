@@ -1,18 +1,38 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="common-layout">
+    <TopNavBar/>
+    <div class="main-container">
+      <LeftSideBar :menu_list="need_list"/>
+      <div style="flex: 1;">
+        <router-view></router-view>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
+import TopNavBar from "@/components/TopNavBar.vue";
+import LeftSideBar from "@/components/LeftSideBar.vue";
+import {useRouter} from "vue-router";
 export default defineComponent({
-  name: 'HomeView',
   components: {
-    HelloWorld,
+    TopNavBar,
+    LeftSideBar
   },
-});
+  setup () {
+    const router = useRouter()
+    const need_list = router.getRoutes().filter(v => v.meta.isShow)
+    //console.log(need_list)
+    return {
+      need_list
+    }
+  }
+})
 </script>
+
+<style lang="scss">
+  .main-container{
+    display: flex;
+  }
+</style>
