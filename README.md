@@ -94,11 +94,71 @@ http://localhost:8081/
 
 ## 关于fastmock
 
-fastmock网站地址: https://www.fastmock.site
-
 已经有几个小伙伴询问我关于fastmock的问题, 在这里想简单说一下
 
 由于这个项目本身只是一个前端项目,是没有后端的, 但是前端又想要展示数据,于是用fastmock这个网站提供的模拟接口的功能
+
+### 简单使用
+
+首先进入fastmock的官网
+
+fastmock网站地址: https://www.fastmock.site
+
+点击导航栏 的**立即使用**
+
+![image-20220812110820696](https://firstbucket-1300448090.cos.ap-chengdu.myqcloud.com//cbz_book_imagesimage-20220812110820696.png)
+
+如果没有账号,要先创建一个账号, 我是用github登录的
+
+
+
+![image-20220812110921841](https://firstbucket-1300448090.cos.ap-chengdu.myqcloud.com//cbz_book_imagesimage-20220812110921841.png)
+
+登录后, 可以创建项目, 也有使用文档, 文档是最好的学习方式
+
+![image-20220812111155715](https://firstbucket-1300448090.cos.ap-chengdu.myqcloud.com//cbz_book_imagesimage-20220812111155715.png)
+
+
+
+进入创建的项目
+
+
+
+![image-20220812111321487](https://firstbucket-1300448090.cos.ap-chengdu.myqcloud.com//cbz_book_imagesimage-20220812111321487.png)
+
+
+
+关于上面接口根地址, 它将作为请求的根路径
+
+可以看到在这个项目代码`request/index.ts`文件中,关于axios的配置(下面是up主配的, 上面是我自己的)
+
+![image-20220812111800684](https://firstbucket-1300448090.cos.ap-chengdu.myqcloud.com//cbz_book_imagesimage-20220812111800684.png)
+
+
+
+新建一个接口
+
+
+
+![image-20220812111442866](https://firstbucket-1300448090.cos.ap-chengdu.myqcloud.com//cbz_book_imagesimage-20220812111442866.png)
+
+
+
+可以看到, 数据是写在一个`json`字符串中, 它是写死的, 前端请求的数据, 就是这里设置的
+
+
+
+目前我也没有使用除了get以外的请求测试
+
+
+
+原视频项目中的up主定义的mock接口依然可以用
+
+
+
+> 更新于2022-08-12 11:16
+
+
 
 ## 最后
 
