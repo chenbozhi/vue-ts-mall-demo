@@ -92,6 +92,14 @@ http://localhost:8081/
 
 ![image-20220622162531334](https://firstbucket-1300448090.cos.ap-chengdu.myqcloud.com/cbz_book_images/image-20220622162531334.png)
 
+## 关于fastmock
+
+fastmock网站地址: https://www.fastmock.site
+
+已经有几个小伙伴询问我关于fastmock的问题, 在这里想简单说一下
+
+由于这个项目本身只是一个前端项目,是没有后端的, 但是前端又想要展示数据,于是用fastmock这个网站提供的模拟接口的功能
+
 ## 最后
 
 花了两天时间来敲这个项目demo, 收获还是很多的, 关于vue3的新特性,与vue2不同的用法, 还有使用ts
