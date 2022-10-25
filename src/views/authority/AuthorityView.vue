@@ -27,7 +27,7 @@ export default defineComponent({
 
     onMounted(() => {
       getAuthorityList().then(res => {
-        authority_data.authority_list = res.data
+        authority_data.authority_list = res.data.data
       })
     })
     const route = useRoute()   // 当前活跃的路由

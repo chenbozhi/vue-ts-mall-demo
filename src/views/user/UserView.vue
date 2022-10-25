@@ -131,14 +131,14 @@ export default defineComponent({
     // 获取全部用户数据, 因为多个地方使用,所以封装为方法
     const p_getUserList = () => {
       getUserList().then(res => {
-        user_data.user_list = res.data
+        user_data.user_list = res.data.data
       })
     }
 
     // 获取全部角色数据, 因为多个地方使用,所以封装为方法
     const p_getRoleList = () => {
       getRoleList().then(res => {
-        user_data.role_with_auth_list = res.data
+        user_data.role_with_auth_list = res.data.data
       })
     }
 

@@ -43,7 +43,7 @@ export default defineComponent({
     onMounted(() => {
       getRoleList().then(res => {
         console.log(res)
-        role_data.role_list = res.data
+        role_data.role_list = res.data.data
       })
     })
 
