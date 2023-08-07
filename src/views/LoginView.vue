@@ -34,6 +34,7 @@ import { FormInstance } from "element-plus";
 import {defineComponent, reactive, ref, toRefs} from "vue";
 import {login} from "@/request/api";
 import {useRouter} from "vue-router";
+import { ElMessage } from 'element-plus'
 
 export default defineComponent({
   setup () {
@@ -91,10 +92,19 @@ export default defineComponent({
             // 将token进行保存
             localStorage.setItem("token", res.data.token)
             // 跳转页面
+            ElMessage({
+            type: 'success', message: '登录成功！'
+          })
+
             router.push('/')
+          }).catch(e => {
+            ElMessage({
+              type: 'warning', message: '登录失败，用户名或密码错误！'
+            })
           })
         } else {
           console.log('error submit!')
+          
           return false
         }
       })

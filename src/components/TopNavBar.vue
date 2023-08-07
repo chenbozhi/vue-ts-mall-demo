@@ -27,11 +27,15 @@
 <script lang="ts">
 import {defineComponent} from 'vue';
 import router from "@/router";
+import { ElMessage } from 'element-plus'
 
 export default defineComponent({
   setup () {
     const handleExit = () => {
       localStorage.removeItem("token")
+      ElMessage({
+            type: 'success', message: '退出成功！'
+          })
       router.push("/login")
     }
     return {
